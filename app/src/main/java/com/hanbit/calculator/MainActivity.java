@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.hanbit.calculator.domain.CalcDTO;
+import com.hanbit.calculator.service.CalcService;
+import com.hanbit.calculator.service.CalcServiceImpl;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //implement : 기능 extends : 속성
 
@@ -14,6 +18,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btPlus, btMinus, btMulti, btDivi, btMod, btEqual, btClear;
     TextView tvResult;
     int result;
+    CalcDTO cal;
+    CalcService service ;
+
 
 
     @Override
@@ -42,6 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btClear.setOnClickListener(this);
 
         tvResult = (TextView) findViewById(R.id.tvResult);
+
+        service = new CalcServiceImpl();
+        cal = new CalcDTO();
+
     }
 
     @Override
@@ -49,27 +60,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int num1 = Integer.parseInt(String.valueOf(etNum1.getText()));
         int num2 = Integer.parseInt(etNum2.getText().toString());
+        cal.setNum1(num1);
+        cal.setNum2(num2);
 
         switch (v.getId()){
 
             case R.id.btPlus :
-                result = num1 + num2;
+                result = service.plus(cal);
                 break;
 
             case R.id.btMinus:
-                result = num1 - num2;
+                result = service.minus(cal);
                 break;
 
             case R.id.btMulti:
-                result = num1 * num2;
+                result = service.multi(cal);
                 break;
 
             case R.id.btDivi:
-                result = num1 / num2;
+                result = service.divi(cal);
                 break;
 
             case R.id.btMod:
-                result = num1 % num2 ;
+                result = service.mod(cal);
                 break;
 
             case R.id.btEqual:
