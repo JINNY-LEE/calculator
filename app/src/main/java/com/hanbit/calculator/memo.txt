@@ -1,0 +1,243 @@
+
+<안드로이드 개요>
+
+Java 문법
+
+OOP(Object Oriented Programming) 개념  : 객체지향언어은 상추다.
+
+1.Encapsulation : 클래스를 은닉화하라
+
+
+2.Inheritance : 클래스를 상속구조로 작성하라
+
+
+3.Abstraction : 인터페이스를 통한 추상화를 하라
+
+
+4.Poly Morphism : 다형성을 염두해 두고 클래스를 작성하라
+
+
+
+
+
+MVC 패턴 : Web서버 구축 시 ( 통신 필요 )
+
+•Model(서버)
+
+
+•View(화면)
+
+
+•Controller (데이터전송) URL
+
+
+
+
+
+MVVM 패턴 : App서버 구축 시 ( 내 개인 애플리케이션 : 통신불필요)
+
+•Model(서버) POJO
+
+
+•View(화면) → activity_main.xml
+
+
+•ViewModel(일체화 된 데이터 전송) → MainActivity.java
+
+
+          모델과 뷰의 두가지 특징을 잘 가지고 있음
+
+
+
+
+설정 패키지
+
+1. JDK : Java 8
+
+2. SDK -> ADT : Android Studio(IDE)
+
+3. Emulator : Genymotion
+
+4. Version Control : Git
+
+
+
+
+1.Cmd : Java -version (자바버전 확인)
+
+
+2.SDK : Mininum SDK : 마시멜로우 버전 (6.0) API23
+
+
+
+
+
+Naming Convention
+
+대..대.. : Pascal → 클래스/인터페이스
+
+소..대 : Camel → 변수
+
+under score : Static Source 표기법 (언더바)
+
+
+
+
+
+
+
+
+
+Shortcuts:
+
+CAS : Ctrl+Alt+S
+
+•(1) Auto Import : SDK  에 있는 모든 class 가져다 쓰겠다
+
+
+•(2) Appearance : Show Line numbers
+
+
+•(3) Font
+
+
+•(4) GenyMotion 설치 (Plugin → Browse Repository )
+
+
+•경로지정 :  C:\Program Files\Genymobile\Genymotion
+
+
+Go Line : Ctrl + G
+
+Shift + F10 : 재실행
+
+Auto complete : Alt +Enter :
+
+Auto Import : Alt + Insert
+
+Ctrl + D : 라인 복사
+
+Ctrl + Y : 라인 삭제
+
+
+
+
+
+
+
+구조
+
+activitiy_main.xml
+
+<LinearLayout> static
+
+<RelativeLayout> dynamic
+
+Android:orientation : LinearLayout의 방향성
+
+
+
+
+MainActivity.java
+
+R → Resources의 약자 View 레이어에 접근
+
+
+
+
+
+
+
+
+
+키워드와 identifier : 자바의 두 가지 언어………
+
+
+
+
+Class 안에는 메모리 영역
+
+1.Object는 속성(property)과 기능(method)의 합이다.
+
+
+2.Property는 field에 존재하고, //인스턴스 변수
+
+
+•Field는 속성을 담당하므로 연산을 하지 않는다. (연산은 CPU가 하기때문에)
+
+
+3.Method는 area에 존재한다. Area : 특정공간 // 지역변수
+
+
+•Field는 속성을 담당하므로 연산을 하지 않고 선언만 한다.
+
+
+•Area는 기능을 담당하므로 반드시 연산을 해야한다.
+
+
+
+
+
+
+
+•클래스 변수 : static 변수
+
+
+
+
+
+
+
+
+Java 선언하는 방법
+
+Class ID{} // 클래스
+
+Void ID(){}  // 메소드
+
+ID 식별자가 없음 : switch (){}, for(){}, if(){} // statement
+
+
+
+
+⇒ MVC 패턴
+
+
+
+
+
+
+Github
+
+When create
+
+git init
+
+git add -A
+
+git config --global user.email “wingshoi@naver.com”
+
+git config --global user.name “jinny.lee”
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/JINNY-LEE/calculator.git
+
+git push -u origin master
+
+
+
+
+When update
+
+git add -A
+
+git commit -m "final commit"
+
+git push -u origin master
+
+
+
+
+C:\Users\hb2008\AndroidStudioProjects\Calculator 에서 git base here
+
